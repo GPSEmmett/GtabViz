@@ -1,0 +1,14 @@
+when writing a tab.json, obviously it will need to be scored in guitar tablature; so, make sure you have the correct score.
+
+There are three attributes in the main object:
+
+.Song:
+this is an object with two string attributes called "Name" and "Composer". These do not have a special formatting, as they are only displayed.
+
+.Score:
+this is a 2D array with each note in the score being an element. The notes themselves are the inner arrays with index 0 ([0]) being deticated to the string on the guitar -strings of zero imply a rest- [1] being deticated to the fret on the guitar and [2] being deticated to the note length -beats of zero imply they are played in tandem with the last.
+
+.Signature:
+this is the time signature of the song. it's an array with a syntax like: [measure length, tempo (ms/beat)].
+
+I have an exerpt from "Bella Ciao" attached for reference. Good Luck ;)

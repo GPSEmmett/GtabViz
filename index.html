@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+ <body>
+   <div id="controlPanel">
+     <div id="ctrlMarker"></div>
+     <div id="mainCtrl">
+    <h1>Control Panel</h1>
+     <hr style="color:--color;">
+     <h1 id="title">Title</h1>
+     <h3 id="author">Author</h3>
+     <hr style="color:--color;">
+     Pace
+     <br>
+    <input id="pacer" type="range" min="0.2" max="2" step="0.1" value="1" list="markers"/>
+     <datalist id="markers">
+       <option value="0.2"></option>
+       <option value="1"></option>
+       <option value="2"></option>
+     </datalist>
+    <input type="button" id="playButton" value="Play"/>
+    <br>
+    <input type="button" id="reset" value="Restart"/>
+     <h3>Color</h3>
+       <label for="color1" class="Lbl">Primary</label>
+    <input type="color" value="#924747" id="color1"></input>
+    <br>
+       <label for="color2" class="Lbl">Secondary</label>
+    <input type="color" value="#ffffff" id="color2"></input>
+     <hr>
+     </div>
+     <div id="synthCtrl">
+       <h3>Synth</h3>
+       <label for="synth" class="Lbl">Volume</label><input type="range" id="synth" value="0.1" min="0" max="1" step="0.1"/>
+       <br>
+       <label for="attack" class="Lbl">Attack</label>
+       <input type="range" id="attack" value="0.2" step="0.1" min="0" max="1"/>
+       <br>
+       <label for="sustain" class="Lbl">Sustain</label> 
+       <input type="range" id="sustain" value="0.5" step="0.1" min="0" max="1"/>
+     </div>
+  </div>
+  <h1>Guitar Vizualizer</h1>
+  <br>
+  <div id="centerTabs">
+    <div id="indicator"></div>
+    <canvas id="tabHome">
+      <p>Your browser does not support the canvas element.</p>
+    </canvas>
+  </div>
+  <br>
+  <div id="dropZone">
+    <p>Drag a <i>Song_Score</i>.json file into the <b>drop zone</b>. Or select a file</p>
+    <label class="Lbl" id="inLbl"><input type="file" id="input" accept="text/.json">Upload File</label>
+  </div>
+  <script src="AudioSynth/synth.js"></script>
+  <script src="PitchDetect/pitchDet(Altered).js"></script>
+  <script src="script.js"></script>
+ </body>
+</html>
